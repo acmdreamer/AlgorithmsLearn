@@ -26,7 +26,7 @@ public class InsertSort {
                         left = middle + 1;
                     }
                 }
-                for(int i = sortIndex - 1;i>right && i>0;--i){
+                for(int i = sortIndex - 1;i>right;--i){
                     list.set(i+1,list.get(i));
                 }
                 list.set(right+1,key);
