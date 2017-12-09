@@ -11,28 +11,6 @@ import java.util.List;
  * @Date: Create in 2017/12/9 18:45
  */
 public class InsertSort {
-    static public void halfSort(int a[]) {
-        for (int i = 0; i < a.length; i++) {
-            int low = 0, mid = 0, high = i;
-            int temp = a[i];
-            while (low <= high) {
-                mid = (low + high) / 2;
-                if (a[mid] < temp) {
-                    low = mid + 1;
-                } else {
-                    high = mid - 1;
-                }
-            }
-            // 找到要插入的位置，然后将这个位置以后的所有元素向后移动
-            for (int j = i - 1; j > high; j--)
-
-            {
-                a[j + 1] = a[j];
-            }
-            a[high + 1] = temp;
-
-        }
-    }
     public static  void inderSort(List<Integer> list){
         int len = list.size();
         for(int sortIndex = 1; sortIndex < len;++sortIndex){
